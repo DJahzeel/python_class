@@ -1,28 +1,70 @@
-# Casos de prueba o escenarios
 
-Este documento describe los casos de prueba para el script de Python desarrollado para ----lo que se que haga el programa--. El objetivo de estas pruebas es validar y garantizar que el script funciona correctamente y cumple con las especificaciones.
+**Casos de prueba**
 
-Los casos de prueba se han diseñado teniendo en cuenta las diferentes funcionalidades del script así como los posibles errores que puedan surgir.
+Este documento describe los casos de prueba para el script de Python desarrollado para contar la cantidad de cada nucleótido en una secuencia de ADN y mostrar los resultados en pantalla.
 
-El script está diseñado para ----lo que sea que haga el programa---- --- como lo hace----
+Los casos de prueba se han diseñado considerando las diferentes funcionalidades del script y las posibles situaciones de error.
+
+El script cuenta con dos métodos principales para procesar la secuencia de ADN: uno que abre el archivo "sequence.txt" en modo lectura y otro que abre un archivo especificado por el usuario.
 
 Los casos de prueba cubren las características clave del programa y prueban varias condiciones para garantizar la robustez y fiabilidad del script.
 
-La ejecución exitosa de estos casos de prueba asegura que el script está listo para su uso y puede manejar diferentes condiciones de entrada y situaciones de error.
+La ejecución exitosa de estos casos de prueba asegura que el script esté listo para su uso y pueda manejar diferentes condiciones de entrada y situaciones de error.
 
-A continuación, presentamos los detalles de los casos de prueba. Cada caso de prueba incluye una descripción del caso de prueba, los datos de entrada utilizados y el resultado esperado.
-    
-    
-### Caso de prueba 1: Comprobación de ----
+A continuación, se presentan los detalles de los casos de prueba. Cada caso de prueba incluye una descripción del caso de prueba, los datos de entrada utilizados y el resultado esperado.
 
-- Descripción: Verificar que el script puede ----
-- Datos de entrada: ----
-- Resultado esperado: ---
-- Estado: -----
+---
 
-### Caso de prueba 2: Comprobación de error ----
+**Caso de prueba 1: Prueba con el archivo "sequence.txt" predeterminado**
 
-- Descripción: Verificar que el script puede ------
-- Datos de entrada: ---
-- Resultado esperado: ---
-- Estado: ----
+Este caso de prueba verifica si el programa puede contar correctamente los nucleótidos en la secuencia de ADN del archivo predeterminado "sequence.txt".
+
+**Comando de ejecución:**
+
+```bash
+python contador_nucleotidos.py
+```
+
+**Resultado esperado:** El programa debería imprimir en pantalla los conteos de los nucleótidos A, C, G y T en la secuencia de ADN del archivo "sequence.txt".
+
+---
+
+**Caso de prueba 2: Prueba con un archivo de secuencia de ADN proporcionado por el usuario**
+
+En este caso de prueba, se proporcionará un archivo de secuencia de ADN específico por el usuario y se verificará si el programa cuenta correctamente los nucleótidos en esa secuencia.
+
+**Comando de ejecución:**
+
+```bash
+python contador_nucleotidos.py archivo_secuencia_adn.txt
+```
+
+**Resultado esperado:** El programa debería imprimir en pantalla los conteos de los nucleótidos A, C, G y T en la secuencia de ADN del archivo proporcionado por el usuario.
+
+---
+
+**Caso de prueba 3: Prueba con un archivo que no existe**
+
+Este caso de prueba verifica si el programa maneja correctamente la situación en la que se proporciona un nombre de archivo que no existe.
+
+**Comando de ejecución:**
+
+```bash
+python contador_nucleotidos.py archivo_que_no_existe.txt
+```
+
+**Resultado esperado:** El programa debería imprimir en pantalla un mensaje de error indicando que el archivo especificado no fue encontrado.
+
+---
+
+**Caso de prueba 4: Prueba con un archivo vacío**
+
+En este caso de prueba, se proporcionará un archivo vacío y se verificará si el programa puede manejar adecuadamente esta situación.
+
+**Comando de ejecución:**
+
+```bash
+python contador_nucleotidos.py archivo_vacio.txt
+```
+
+**Resultado esperado:** El programa debería imprimir en pantalla los conteos de todos los nucleótidos como cero.
