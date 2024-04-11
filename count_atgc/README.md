@@ -1,14 +1,10 @@
-```python
+
 # Contador de la ocurrencia de nucleótidos de ADN en un archivo
 
 Este script de Python está diseñado para contar la ocurrencia de los nucleótidos 'A', 'T', 'G' y 'C' en una secuencia de ADN contenida en un archivo de texto.
 
 ## Uso
 El script no acepta argumentos de línea de comandos. Operará automáticamente abriendo un archivo de texto llamado "sequence.txt" en el directorio actual y contará la ocurrencia de cada nucleótido en la secuencia. Si deseas usar un archivo diferente, asegúrate de colocarlo en el mismo directorio y renombrarlo como "sequence.txt".
-
-```
-python contador_nucleotidos.py
-```
 
 ## Salida
 
@@ -31,10 +27,6 @@ Si el archivo proporcionado no existe en el directorio actual, el script generar
 ## Pruebas
 
 Para probar el script, simplemente ejecútalo desde la línea de comandos y asegúrate de que cuente correctamente la ocurrencia de cada nucleótido en la secuencia contenida en el archivo.
-
-```
-python contador_nucleotidos.py
-```
 
 ## Datos
 El script opera en archivos de texto plano que contienen secuencias de ADN. No hay restricciones en el número de líneas o caracteres en el archivo.
