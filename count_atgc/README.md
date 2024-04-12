@@ -1,4 +1,4 @@
-##Contador de la ocurrencia de nucleótidos de ADN en un archivo
+## Contador de la ocurrencia de nucleótidos de ADN en un archivo
 
 Este script de Python está diseñado para contar la cantidad de cada nucleótido en una secuencia de ADN contenida en un archivo de texto y mostrar los resultados en pantalla.
 
