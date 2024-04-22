@@ -12,12 +12,13 @@
 - El sistema debe permitir al usuario proporcionar un archivo de entrada que contenga una secuencia de ADN.
 - El programa debe contar la frecuencia de cada nucleótido en la secuencia y mostrar los resultados en pantalla.
 - Debe ser posible especificar opcionalmente los nucleótidos para los cuales se desea ver la frecuencia.
-- El programa debe manejar situaciones como archivos vacíos, archivos no encontrados y caracteres inválidos en la secuencia de ADN.
+- El programa debe manejar situaciones como archivos vacíos, archivos no encontrados y caracteres inválidos en la secuencia de ADN y nucleótidos no válidos proporcionados como argumento opcional.
 
 **Requisitos no funcionales:**
 - Tiempo de respuesta: El programa debe ejecutarse de manera eficiente incluso con secuencias de ADN largas.
 - Seguridad: El programa debe manejar adecuadamente los archivos de entrada para evitar posibles vulnerabilidades.
 - Plataforma tecnológica: El programa debe ejecutarse en cualquier sistema operativo compatible con Python.
+- Nucleótidos no válidos proporcionados como argumento opcional: Se muestra un mensaje de advertencia indicando los nucleótidos no válidos y se termina el programa.
 
 
 **Análisis y Diseño:** El programa se basa en un enfoque simple pero efectivo. Abrirá el archivo especificado por el usuario. Luego, leerá su contenido y contará la cantidad de cada nucleótido presente en la secuencia de ADN. Finalmente, mostrará los resultados de los conteos en pantalla.
