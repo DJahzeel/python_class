@@ -1,6 +1,6 @@
 '''
 NAME: Contador de Nucleótidos
-VERSION: 1.3
+VERSION: 1.4
 AUTHOR: Palafox Collaodo Dara Jazheel. darapc@lcg.unam.mx
 DESCRIPTION: Este programa cuenta la cantidad de cada nucleótido en una secuencia de DNA e imprime los resultados en pantalla. 
     La secuencia viene en un archivo de texto dado por el usuario. 
@@ -9,7 +9,8 @@ DESCRIPTION: Este programa cuenta la cantidad de cada nucleótido en una secuenc
     Si el archivo no se encuentra, el programa mostrará el mensaje "Sorry, couldn't find the file".
     Si el archivo está vacío, el programa mostrará el mensaje "Sorry, the file is empty".
     Además, el programa acepta letras ATGC mayúsculas o minúsculas, y cualquier otro carácter que no sea una letra ATGC será considerado inválido.
-    
+    Este programa incluye funcionalidades adicionales para el análisis de secuencias de ADN, como el cálculo de la frecuencia de codones y la identificación de sitios de restricción.
+
 CATEGORY: Bioinformática
 USAGE:
     % python contador_nucleotidos.py <nombre_archivo> [-nucleotidos <letras>]
@@ -24,13 +25,18 @@ METHOD:
     Si se proporcionan nucleótidos como argumento opcional, se verificará su validez antes de realizar el conteo, 
     asegurando que solo se acepten nucleótidos válidos.
     Luego, muestra los resultados en pantalla.
+    Además, el programa puede analizar la frecuencia de codones en la secuencia de ADN y identificar sitios de restricción.
+    Para realizar estas nuevas funcionalidades, el programa utiliza las siguientes funciones del paquete utils:
+       - calcular_frecuencia_codones: Calcula la frecuencia de los codones en la secuencia de ADN.
+       - encontrar_sitios_restriccion: Identifica los sitios de restricción en la secuencia de ADN.
 SEE ALSO: No aplica
 '''
 # ===========================================================================
 # =                            imports
 # ===========================================================================
 import sys
-
+from utils.codon_frequency import calcular_frecuencia_codones 
+from utils.restriction_sites import encontrar_sitios_restriccion  
 # ===========================================================================
 # =                            functions
 # ===========================================================================
@@ -102,6 +108,21 @@ def main():
     conteos = contar_nucleotidos(nombre_archivo, nucleotidos)
     for nucleotido, conteo in conteos.items():
         print(f"{nucleotido}: {conteo}")
+
+ # Análisis de Frecuencia de Codones
+    secuencia = ""
+    with open(nombre_archivo, 'r') as f:
+        secuencia = f.read().upper()
+
+    frecuencia_codones = calcular_frecuencia_codones(secuencia)
+    print("\nFrecuencia de Codones:")
+    for codon, frecuencia in frecuencia_codones.items():
+        print(f"{codon}: {frecuencia}")
+
+    # Identificación de Sitios de Restricción
+    sitios_restriccion = encontrar_sitios_restriccion(secuencia)
+    print("\nSitios de Restricción encontrados en la secuencia:")
+    print(sitios_restriccion)
 
 if __name__ == "__main__":
     main()
