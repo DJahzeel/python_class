@@ -82,3 +82,54 @@ python contador_nucleotidos.py archivo_secuencia_adn.txt -nucleotidos ATGXYZ
 ```
 
 **Resultado esperado:** El programa debería imprimir en pantalla los conteos de los nucleótidos A, T y G en la secuencia de ADN del archivo proporcionado por el usuario. Además, debería mostrar un mensaje de advertencia indicando que los nucleótidos X, Y y Z no son válidos y finalizar el programa.
+Por supuesto, aquí tienes los casos de prueba adicionales que cubren las nuevas funcionalidades implementadas:
+
+---
+
+**Caso de prueba 6: Prueba de análisis de frecuencia de codones**
+
+Este caso de prueba verifica si el programa puede calcular correctamente la frecuencia de los codones en una secuencia de ADN.
+
+**Datos de entrada:**
+Secuencia de ADN con varios codones repetidos.
+
+**Comando de ejecución:**
+```
+python contador_nucleotidos.py archivo_secuencia_adn.txt
+```
+
+**Resultado esperado:** El programa debería imprimir en pantalla la frecuencia de cada codón en la secuencia de ADN proporcionada.
+
+---
+
+**Caso de prueba 7: Prueba de identificación de sitios de restricción**
+
+Este caso de prueba verifica si el programa puede identificar correctamente los sitios de restricción en una secuencia de ADN.
+
+**Datos de entrada:**
+Secuencia de ADN que contiene uno o más sitios de restricción conocidos.
+
+**Comando de ejecución:**
+```
+python contador_nucleotidos.py archivo_secuencia_adn.txt
+```
+
+**Resultado esperado:** El programa debería imprimir en pantalla la ubicación de los sitios de restricción encontrados en la secuencia de ADN proporcionada.
+
+---
+
+**Caso de prueba 8: Prueba combinada de análisis de frecuencia de codones e identificación de sitios de restricción**
+
+Este caso de prueba verifica si el programa puede realizar correctamente tanto el análisis de la frecuencia de codones como la identificación de sitios de restricción en una secuencia de ADN que contiene ambos elementos.
+
+**Datos de entrada:**
+Secuencia de ADN que contiene tanto codones repetidos como sitios de restricción conocidos.
+
+**Comando de ejecución:**
+```
+python contador_nucleotidos.py archivo_secuencia_adn.txt
+```
+
+**Resultado esperado:** El programa debería imprimir en pantalla la frecuencia de cada codón y la ubicación de los sitios de restricción encontrados en la secuencia de ADN proporcionada.
+
+
