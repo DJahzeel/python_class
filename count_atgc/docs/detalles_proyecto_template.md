@@ -4,7 +4,7 @@
 
 **Participantes / Autor:** Palafox Collaodo Dara Jazheel (darapc@lcg.unam.mx)
 
-**Descripción del Problema:** El programa tiene como objetivo contar la cantidad de cada nucleótido presente en una secuencia de ADN proporcionada por el usuario. El programa debe manejar diferentes situaciones, como archivos vacíos o inexistentes, así como caracteres inválidos en la secuencia de ADN.
+**Descripción del Problema:** El programa tiene como objetivo contar la cantidad de cada nucleótido presente en una secuencia de ADN proporcionada por el usuario. El programa debe manejar diferentes situaciones, como archivos vacíos o inexistentes, así como caracteres inválidos en la secuencia,análisis de la frecuencia de codones y la identificación de sitios de restricción en la secuencia de ADN.
 
 **Especificación de Requisitos:**
 
@@ -13,6 +13,7 @@
 - El programa debe contar la frecuencia de cada nucleótido en la secuencia y mostrar los resultados en pantalla.
 - Debe ser posible especificar opcionalmente los nucleótidos para los cuales se desea ver la frecuencia.
 - El programa debe manejar situaciones como archivos vacíos, archivos no encontrados y caracteres inválidos en la secuencia de ADN y nucleótidos no válidos proporcionados como argumento opcional.
+- El programa debe analizar e identificar sitios de restricción.
 
 **Requisitos no funcionales:**
 - Tiempo de respuesta: El programa debe ejecutarse de manera eficiente incluso con secuencias de ADN largas.
@@ -21,7 +22,7 @@
 - Nucleótidos no válidos proporcionados como argumento opcional: Se muestra un mensaje de advertencia indicando los nucleótidos no válidos y se termina el programa.
 
 
-**Análisis y Diseño:** El programa se basa en un enfoque simple pero efectivo. Abrirá el archivo especificado por el usuario. Luego, leerá su contenido y contará la cantidad de cada nucleótido presente en la secuencia de ADN. Finalmente, mostrará los resultados de los conteos en pantalla.
+**Análisis y Diseño:** El programa se basa en un enfoque simple pero efectivo. Abrirá el archivo especificado por el usuario. Luego, leerá su contenido y contará la cantidad de cada nucleótido presente en la secuencia de ADN asi como identificar los sitios de restricción. Finalmente, mostrará los resultados de los conteos en pantalla.
 
 **Pseudocódigo:**
 1. Leer el nombre del archivo de entrada desde la línea de comandos
